@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>Tap Kingdom</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <div class="topbar">
+        <div class="coin-panel">
+          <div class="coin-icon"></div>
+          <div class="score-wrap">
+            <span class="label">Coins</span>
+            <span id="score">0</span>
+          </div>
+        </div>
+
+        <div class="level-panel">
+          <span id="levelText">Lv.1</span>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-box">
+          <span class="stat-label">Tap</span>
+          <strong id="tapPower">1</strong>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Auto</span>
+          <strong id="autoPower">0</strong>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Combo</span>
+          <strong id="comboValue">x1</strong>
+        </div>
+      </div>
+
+      <div class="arena">
+        <div class="ring ring-one"></div>
+        <div class="ring ring-two"></div>
+
+        <button id="tapButton" class="tap-button" aria-label="Tap to earn coins">
+          <span class="tap-glow"></span>
+          <span class="tap-core">TAP</span>
+        </button>
+      </div>
+
+      <div class="shop-panel">
+        <div class="panel-header">Upgrade Shop</div>
+        <div class="shop-grid">
+          <div class="shop-item" data-upgrade="tap">
+            <div class="item-name">Tap Boost</div>
+            <div class="item-cost" id="tapCost">20</div>
+            <button>Buy</button>
+          </div>
+
+          <div class="shop-item" data-upgrade="auto">
+            <div class="item-name">Auto Tap</div>
+            <div class="item-cost" id="autoCost">50</div>
+            <button>Buy</button>
+          </div>
+
+          <div class="shop-item" data-upgrade="burst">
+            <div class="item-name">Mega Burst</div>
+            <div class="item-cost" id="burstCost">120</div>
+            <button>Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
